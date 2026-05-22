@@ -109,7 +109,7 @@ async def delete_user(
     if user_id != current_user.id:
         raise HTTPException(
             status_code=HTTPStatus.FORBIDDEN,
-            detail='You can only update your own user',
+            detail='You can only delete your own user',
         )
 
     await session.delete(current_user)
