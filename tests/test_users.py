@@ -70,7 +70,7 @@ def test_update_integrity_error(client, user, other_user, token):
 
     assert response_update.status_code == HTTPStatus.CONFLICT
     assert response_update.json() == {
-        'detail': 'Username or Email already exists'
+        'detail': 'Username or email already exists'
     }
 
 
